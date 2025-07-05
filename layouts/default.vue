@@ -1,16 +1,20 @@
 <template>
-    <v-app>
+    <v-app class="bg-surface">
       <!-- App bar -->
        <Header/>
       <v-main>
-        <v-container fluid>
+        <v-container>
           <slot/> 
         </v-container>
       </v-main>
 
-      <!-- Footer -->
-      <v-footer app>
-        <span class="text-center">© 2023 Huevang</span>
-      </v-footer>
+     
     </v-app>
 </template>
+
+
+<style >
+ *{
+  font-family: 'Prompt', sans-serif;
+ }
+</style>

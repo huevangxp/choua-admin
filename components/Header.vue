@@ -10,7 +10,7 @@
          </v-avatar>
         <v-toolbar-title class="text-uppercase font-weight-bold">Huevang</v-toolbar-title>
       </v-app-bar>
-      <v-navigation-drawer app>
+      <v-navigation-drawer permanent app color="white" >
     <v-list nav dense>
       <v-list-item
         v-for="item in home"
@@ -23,8 +23,8 @@
           <v-icon color="primary" class="me-2">{{ item.icon }}</v-icon>
         </template>
 
-        <v-list-item-title class="text-body-1 font-medium">
-          {{ item.title }}
+        <v-list-item-title class="text-body-1 font-medium ">
+          <span class="font-weight-bold">{{ item.title }}</span>
         </v-list-item-title>
       </v-list-item>
     </v-list>
@@ -36,9 +36,12 @@
 
 const home = ref([
 { title: 'Dashboard', link: '/', icon: 'mdi-view-dashboard' },
-  { title: 'Profile', link: '/profile', icon: 'mdi-account-circle' },
-  { title: 'Settings', link: '/settings', icon: 'mdi-cog' },
-  { title: 'Help', link: '/help', icon: 'mdi-help-circle' },
+  { title: 'Admin', link: '/admin', icon: 'mdi-account-circle' },
+  { title: 'Teacher', link: '/teacher', icon: 'mdi-cog' },
+  // add postion
+  { title: 'Position', link: '/position', icon: 'mdi-cog' },
+  // add meeting room
+  { title: 'Meeting Room', link: '/meeting-room', icon: 'mdi-cog' },
   { title: 'Logout', link: '/logout', icon: 'mdi-logout' }
 ])
 
